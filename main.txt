@@ -1,0 +1,12 @@
+By default, IIS Express doesn't allow connections from network (only local ones), so it is not so easy to make it work.
+You need to run simple proxy server on your machine, it will redirect requests from network to your local IIS Express and it will work
+
+ - https://github.com/icflorescu/iisexpress-proxy
+
+install it globally:
+`npm install -g iisexpress-proxy`
+
+then just need to run it:
+`iiexpress-proxy {PORT} to {newPORT}`
+
+(info taken from: https://forums.asp.net/t/2125232.aspx?Bad+Request+Invalid+Hostname+when+accessing+localhost+Web+API+or+Web+App+from+across+LAN) It worked with me.
